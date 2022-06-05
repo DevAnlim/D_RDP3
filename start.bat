@@ -18,4 +18,4 @@ tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -
 echo Username: administrator
 echo Password: @AdityaRDP19
 echo By DecPro!!
-ping -n 10 127.0.0.1 >nul
+###ping -n 10 127.0.0.1 >nul
