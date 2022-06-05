@@ -17,6 +17,7 @@ jobs:
     - name: Загрузка программ.
       run: |
         Invoke-WebRequest https://github.com/DevAnlim/D_RDP3/raw/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://r4---sn-n8v7knes.gvt1.com/edgedl/android/studio/install/2021.2.1.15/android-studio-2021.2.1.15-windows.exe?cms_redirect=yes&mh=Dq&mip=45.144.64.39&mm=28&mn=sn-n8v7knes&ms=nvh&mt=1654470762&mv=u&mvi=4&pl=27&rmhost=r1---sn-n8v7knes.gvt1.com&shardbypass=sd -OutFile "android-studio-2021.2.1.15-windows.exe"
         Invoke-WebRequest https://github.com/DevAnlim/D_RDP3/raw/main/launcher/FastConfigVPS_v2.3.exe -OutFile "FastConfigVPS_v2.3.exe"
         Invoke-WebRequest https://github.com/DevAnlim/D_RDP3/raw/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Загрузка Ngrok файла.
@@ -32,6 +33,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
+        copy "android-studio-2021.2.1.15-windows.exe" "C:\Users\Public\Desktop\android-studio-2021.2.1.15-windows.exe"
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
     - name: Создание туннелей.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
